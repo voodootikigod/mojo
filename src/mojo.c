@@ -16,7 +16,7 @@ usage() {
 
 int 
 main(int argc, char **argv) {
-  if (argc && strcmp(argv[1], "--help") == 0) usage();
+  if (argc > 1 && strcmp(argv[1], "--help") == 0) usage();
   else Mojo_parse();
   return 0;
 }
