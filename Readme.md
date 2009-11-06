@@ -16,6 +16,11 @@
 
     $ make
     $ make install
+    
+## Mojo Binary
+
+    $ mojo < in > out
+    $ mojo --help
 
 ## Running Tests
 
