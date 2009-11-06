@@ -1,4 +1,6 @@
 
+.PHONY: benchmarks
+
 CC = gcc
 LEG = leg
 NAME = mojo
@@ -6,13 +8,14 @@ BIN = bin/$(NAME)
 DEST = /usr/bin
 CFILES = src/*.c
 CFLAGS = -std=c99
+RHINO = java org.mozilla.javascript.tools.shell.Main
 
 all: parser build
 	
 build:
 	@$(CC) $(CFLAGS) $(CFILES) -o $(BIN)
 	
-parser:
+parser: src/parser.leg
 	@$(LEG) < src/parser.leg > src/parser.c
 	
 inspect: all
@@ -34,3 +37,6 @@ install: $(BIN)
 uninstall: $(DEST)/$(NAME)
 	rm $(DEST)/$(NAME)
 	
+benchmarks:
+	@$(RHINO) benchmarks/benchmark.js
+
