@@ -13,6 +13,13 @@
   * [leg](http://piumarta.com/software/peg/) (parser generator)
   * [jspec](http://jspec.info) (test suite only)
   
+## Benchmarks
+
+Currently a large template can be executed over 5000 times in a second;
+results using the Rhino JavaScript engine.
+
+    $ make benchmarks
+  
 ## Installation
 
 Include *lib/mojo.js* in your application and:
