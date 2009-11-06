@@ -10,8 +10,8 @@
 ## Dependencies
 
   * gcc (compiler)
-  * leg (parser generator)
-  * jspec (test suite only)
+  * [leg](http://piumarta.com/software/peg/) (parser generator)
+  * [jspec](http://jspec.info) (test suite only)
   
 ## Installation
 
