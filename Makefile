@@ -1,7 +1,8 @@
 
 CC = gcc
 LEG = leg
-BIN = mojo
+NAME = mojo
+BIN = bin/$(NAME)
 DEST = /usr/bin
 CFILES = src/*.c
 CFLAGS = -std=c99
@@ -9,17 +10,17 @@ CFLAGS = -std=c99
 all: parser build
 	
 build:
-	@$(CC) $(CFLAGS) $(CFILES) -o bin/$(BIN)
+	@$(CC) $(CFLAGS) $(CFILES) -o $(BIN)
 	
 parser:
 	@$(LEG) < src/parser.leg > src/parser.c
 	
 inspect: all
-	@./bin/$(BIN) < examples/template.js.html
+	@./$(BIN) < examples/template.js.html
 	
-install: bin/$(BIN)
-	cp bin/$(BIN) $(DEST)/$(BIN) 
+install: $(BIN)
+	cp $(BIN) $(DEST)/$(NAME) 
 	
-uninstall: $(DEST)/$(BIN)
-	rm $(DEST)/$(BIN)
+uninstall: $(DEST)/$(NAME)
+	rm $(DEST)/$(NAME)
 	
