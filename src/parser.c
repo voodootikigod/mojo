@@ -253,7 +253,7 @@ YY_ACTION(void) yy_1_enum(char *yytext, int yyleng)
 {
 #define a yyval[-1]
   yyprintf((stderr, "do yy_1_enum\n"));
-   p("' + %s(o.%s, function(o)%c\n    return '", MOJO_ENUM_FN, a, LPAREN) ;
+   p("' + %s(o, o.%s, function(o)%c\n    return '", MOJO_ENUM_FN, a, LPAREN) ;
 #undef a
 }
 YY_ACTION(void) yy_1_var(char *yytext, int yyleng)
