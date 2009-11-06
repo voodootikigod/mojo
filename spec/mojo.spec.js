@@ -14,6 +14,16 @@ describe 'Mojo'
 			s.should.include('<p>Is awesome</p>')
 			s.should.include('</div>')
     end
+  
+    it 'should escape property values'
+      var s = render('article', { title: 'Foo & Bar' })
+			s.should.include('<h2>Foo &amp; Bar</h2>')
+    end
+
+    it 'should call toString() on properties'
+      var s = render('article', { title: { toString: 'Yay' } })
+			s.should.include('<h2>Yay</h2>')
+    end
   end
 
   describe '{! comment }'
