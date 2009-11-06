@@ -1,1 +1,1 @@
-'<p>Welcome {.}</p>'
+'<p>Welcome ' + (Mojo.escape(Mojo.normalize(o))) + '</p>'

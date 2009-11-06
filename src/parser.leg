@@ -24,6 +24,8 @@ comment    = open '!' < (!close .)* > close
 
 var        = open a:id close
              { p("' + (Mojo.escape(Mojo.normalize(o.%s))) + '", a) }
+           | open '.' close
+             { p("' + (Mojo.escape(Mojo.normalize(o))) + '") }
 
 enum       = open '#' - a:id close
              { p("' + %s(o, Mojo.normalize(o.%s), function(o)%c\n    return '", MOJO_ENUM_FN, a, LPAREN) }
