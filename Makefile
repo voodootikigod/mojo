@@ -1,5 +1,6 @@
 
 CC = gcc
+LEG = leg
 BIN = bin/lib
 CFILES = src/*.c
 CFLAGS = -std=c99
@@ -10,7 +11,7 @@ build:
 	@$(CC) $(CFLAGS) $(CFILES) -o $(BIN)
 	
 parser:
-	@leg < src/parser.leg > src/parser.c
+	@$(LEG) < src/parser.leg > src/parser.c
 	
-test: all
+inspect: all
 	@./$(BIN) < examples/template.js.html

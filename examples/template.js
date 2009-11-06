@@ -19,10 +19,6 @@ function render(o) {
 	  <h2>' + (o.name) + '</h2>\n\
 	  <ul>\n\
 	    \n\
-	    ' + enumerate(o.roles, function(o){
-	    return '\n\
-	      <li>' + (o.name) + '</li>\n\
-	    '}) + '\n\
 	    \n\
 	    ' + enumerate(o.roles, function(o){
 	    return '\n\
