@@ -26,8 +26,6 @@ enum       = open '#' - a:id close             { p("' + %s(o.%s, function(o)%c\n
 open       = '{'+ -
 close      = - '}'+
                                                
-int        = < [0-9]+ >                        { DUP }
-uid        = < [A-Z][a-zA-Z0-9_]* >            { DUP }
 id         = < [a-zA-Z0-9_]+ >                 { DUP }
 EOF        = !.
 ws         = s | nl                          
