@@ -61,6 +61,16 @@ describe 'Mojo'
 			  s.should.not.include('<p>Some foo bar</p>')
 		  end
 		
+		  it 'should render the section when a functions return val is truthy'
+		    var s = render('profile', { name: 'Tj', biography: function(){ return true } })
+		    s.should.include('<h3>Bio</h3>')
+		  end
+		
+		  it 'should not render the section when a functions return val is falsey'
+		    var s = render('profile', { name: 'Tj', biography: function(){ return false } })
+		    s.should.not.include('<h3>Bio</h3>')
+		  end
+		
 		  it 'should not render the section when undefined'
 		    var s = render('profile', { name: 'Tj' })
 			  s.should.include('<h2>Tj</h2>')
