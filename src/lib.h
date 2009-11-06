@@ -12,7 +12,7 @@
 #include <stdlib.h>
 
 #ifndef MOJO_ENUM_FN
-#define MOJO_ENUM_FN "enumerate"
+#define MOJO_ENUM_FN "Mojo.enumerate"
 #endif
 
 void
