@@ -20,6 +20,7 @@ inspect: all
 	
 test: all
 	@./$(BIN) < spec/fixtures/article.html > spec/fixtures/article.html.js
+	@./$(BIN) < spec/fixtures/users.html > spec/fixtures/users.html.js
 	@jspec run --rhino
 	
 install: $(BIN)
