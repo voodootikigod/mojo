@@ -6,6 +6,13 @@ describe 'Mojo'
     end
   end
 
+  describe '{ . }'
+    it 'should reference self '
+      var s = render('welcome', 'Tj')
+			s.should.include('<p>Welcome Tj</p>')
+    end
+  end
+
   describe '{ name }'
     it 'should buffer the given property name'
 			var s = render('article', { title: 'Mojo', body: 'Is awesome' })
