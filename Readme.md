@@ -13,7 +13,9 @@
   * leg (parser generator)
   * jspec (test suite only)
   
-## Building From Source
+## Installation
+
+Include *lib/mojo.js* in your application and:
 
     $ make
     $ make install
@@ -81,22 +83,23 @@ rendered markup output:
       <body>
         <h1>Articles</h1>
 
-          <div class="article">
-            <h2>One</h2>
-            <p>some more one</p>
-
-          </div>
-
-          <div class="article">
-            <h2>Two</h2>
-            <p>some more two</p>
-
-              <p>Two is published</p>
-
-          </div>
+        <div class="article">
+          <h2>One</h2>
+          <p>some more one</p>
+        </div>
+        
+        <div class="article">
+          <h2>Two</h2>
+          <p>some more two</p>
+          <p>Two is published</p>
+        </div>
 
       </body>
     </html>
+    
+The templates produced by **mojo** can be simply copy / pasted
+into your application, or loaded via XMLHttpRequest, or via IO
+for server side implementations. 
     
 ## License 
 
