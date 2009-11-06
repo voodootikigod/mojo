@@ -1,0 +1,43 @@
+%{
+  #include "lib.h"
+  #define YYSTYPE char *
+  #define DUP yy = strdup(yytext)
+  #define LPAREN '{'
+  #define RPAREN '}'
+  #define pc putchar
+  #define p printf
+%}
+
+main       = { pc('\'') } body+ { pc('\'') }
+
+body       = comment
+           | var
+           | enum
+           | nl    { p("\\n\\\n") }
+           | < . > { p("%s", yytext) }
+
+comment    = open '!' < (!close .)* > close
+
+var        = open a:id close                   { p("' + (o.%s) + '", a) }
+
+enum       = open '#' - a:id close             { p("' + %s(o.%s, function(o)%c\n    return '", MOJO_ENUM_FN, a, LPAREN) }
+           | open '/' - a:id close             { p("'%c) + '", RPAREN) }
+
+open       = '{'+ -
+close      = - '}'+
+                                               
+int        = < [0-9]+ >                        { DUP }
+uid        = < [A-Z][a-zA-Z0-9_]* >            { DUP }
+id         = < [a-zA-Z0-9_]+ >                 { DUP }
+EOF        = !.
+ws         = s | nl                          
+nl         = '\r' | '\r\n' | '\n'
+s          = [ \t]+
+-          = [ \t]*
+
+%%
+
+void 
+Mojo_parse() {
+  while (YYPARSE()); 
+}
