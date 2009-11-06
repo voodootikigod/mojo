@@ -1,17 +1,17 @@
 '<html>\n\
   <head>\n\
-    <title>' + (Mojo.escape(o.title)) + '</title>\n\
+    <title>' + (Mojo.escape(Mojo.prop(o.title))) + '</title>\n\
   </head>\n\
   <body>\n\
-    <h1>' + (Mojo.escape(o.title)) + '</h1>\n\
-    ' + Mojo.enumerate(o, o.articles, function(o){
+    <h1>' + (Mojo.escape(Mojo.prop(o.title))) + '</h1>\n\
+    ' + Mojo.enumerate(o, Mojo.prop(o.articles), function(o){
     return '\n\
       <div class="article">\n\
-        <h2>' + (Mojo.escape(o.title)) + '</h2>\n\
-        <p>' + (Mojo.escape(o.body)) + '</p>\n\
-        ' + Mojo.enumerate(o, o.published, function(o){
+        <h2>' + (Mojo.escape(Mojo.prop(o.title))) + '</h2>\n\
+        <p>' + (Mojo.escape(Mojo.prop(o.body))) + '</p>\n\
+        ' + Mojo.enumerate(o, Mojo.prop(o.published), function(o){
     return '\n\
-          <p>' + (Mojo.escape(o.title)) + ' is published</p>\n\
+          <p>' + (Mojo.escape(Mojo.prop(o.title))) + ' is published</p>\n\
         '}) + '\n\
       </div>\n\
     '}) + '\n\

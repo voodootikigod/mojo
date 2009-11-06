@@ -19,6 +19,11 @@ describe 'Mojo'
       var s = render('article', { title: 'Foo & Bar' })
 			s.should.include('<h2>Foo &amp; Bar</h2>')
     end
+
+    it 'should invoke the property if its a function'
+      var s = render('article', { title: function(){ return 'Foo' } })
+			s.should.include('<h2>Foo</h2>')
+    end
   end
 
   describe '{! comment }'

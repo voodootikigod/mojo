@@ -23,10 +23,10 @@ body       = comment
 comment    = open '!' < (!close .)* > close
 
 var        = open a:id close
-             { p("' + (Mojo.escape(o.%s)) + '", a) }
+             { p("' + (Mojo.escape(Mojo.prop(o.%s))) + '", a) }
 
 enum       = open '#' - a:id close
-             { p("' + %s(o, o.%s, function(o)%c\n    return '", MOJO_ENUM_FN, a, LPAREN) }
+             { p("' + %s(o, Mojo.prop(o.%s), function(o)%c\n    return '", MOJO_ENUM_FN, a, LPAREN) }
            | open '/' - a:id close
              { p("'%c) + '", RPAREN) }
 
