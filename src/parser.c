@@ -5,7 +5,7 @@
 #include <string.h>
 #define YYRULECOUNT 13
 
-  #include "lib.h"
+  #include "mojo.h"
   #define YYSTYPE char *
   #define DUP yy = strdup(yytext)
   #define LPAREN '{'
