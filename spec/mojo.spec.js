@@ -51,6 +51,12 @@ describe 'Mojo'
 				s.should.include('<li>Joe is 18</li>')
 				s.should.include('</ul>')
 		  end
+		
+		  it 'should render the collection when referencing self'
+				var s = render('messages', ['Hey', 'There'])
+		    s.should.include('<li>Hey</li>')
+		    s.should.include('<li>There</li>')
+		  end
 		end
 
 		describe 'with non-enumerable property'

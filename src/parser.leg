@@ -29,9 +29,13 @@ var        = open a:id close
 
 enum       = open '#' - a:id close
              { p("' + %s(o, Mojo.normalize(o.%s), function(o)%c\n    return '", MOJO_ENUM_FN, a, LPAREN) }
+           | open '#' - '.' close
+             { p("' + %s(o, Mojo.normalize(o), function(o)%c\n    return '", MOJO_ENUM_FN, LPAREN) }
            | open '/' - a:id close
              { p("'%c) + '", RPAREN) }
-
+           | open '/' - '.' close
+             { p("'%c) + '", RPAREN) }
+ 
 id         = < [a-zA-Z0-9_]+ > 
              { DUP }
 
