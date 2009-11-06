@@ -30,10 +30,11 @@ enum       = open '#' - a:id close
            | open '/' - a:id close
              { p("'%c) + '", RPAREN) }
 
+id         = < [a-zA-Z0-9_]+ > 
+             { DUP }
+
 open       = '{'+ -
 close      = - '}'+
-                                               
-id         = < [a-zA-Z0-9_]+ >                 { DUP }
 nl         = '\r' | '\r\n' | '\n'
 -          = [ \t]*
 
