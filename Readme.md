@@ -7,6 +7,19 @@
 
   * JavaScript
   
+## Dependencies
+
+  * gcc (compiler)
+  * leg (parser generator)
+  
+## Building From Source
+
+    $ make && make install
+
+## Running Tests
+
+    $ make test
+    
 ## License 
 
 (The MIT License)

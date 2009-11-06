@@ -1,7 +1,7 @@
 
 CC = gcc
 LEG = leg
-BIN = bin/lib
+BIN = bin/mojo
 CFILES = src/*.c
 CFLAGS = -std=c99
 
