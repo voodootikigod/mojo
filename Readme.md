@@ -20,7 +20,7 @@
     
 ## Mojo Binary
 
-    $ mojo &lt; in &gt; out
+    $ mojo < in > out
     $ mojo --help
 
 ## Running Tests
@@ -29,25 +29,28 @@
     
 ## Example
 
+View ./examples to see the source for the
+examples shown below.
+
 examples/template.html
 
-    &lt;html&gt;
-      &lt;head&gt;
-        &lt;title&gt;{title}&lt;/title&gt;
-      &lt;/head&gt;
-      &lt;body&gt;
-        &lt;h1&gt;{title}&lt;/h1&gt;
+    <html>
+      <head>
+        <title>{title}</title>
+      </head>
+      <body>
+        <h1>{title}</h1>
         {#articles}
-          &lt;div class="article"&gt;
-            &lt;h2&gt;{title}&lt;/h2&gt;
-            &lt;p&gt;{body}&lt;/p&gt;
+          <div class="article">
+            <h2>{title}</h2>
+            <p>{body}</p>
             {#published}
-              &lt;p&gt;{title} is published&lt;/p&gt;
+              <p>{title} is published</p>
             {/published}
-          &lt;/div&gt;
+          </div>
         {/articles}
-      &lt;/body&gt;
-    &lt;/html&gt;
+      </body>
+    </html>
     
 example template rendering implementation:
 
@@ -71,35 +74,35 @@ template object:
     
 rendered markup output:
 
-    &lt;html&gt;
-      &lt;head&gt;
-        &lt;title&gt;Articles&lt;/title&gt;
-      &lt;/head&gt;
-      &lt;body&gt;
-        &lt;h1&gt;Articles&lt;/h1&gt;
+    <html>
+      <head>
+        <title>Articles</title>
+      </head>
+      <body>
+        <h1>Articles</h1>
 
-          &lt;div class="article"&gt;
-            &lt;h2&gt;One&lt;/h2&gt;
-            &lt;p&gt;some more one&lt;/p&gt;
+          <div class="article">
+            <h2>One</h2>
+            <p>some more one</p>
 
-          &lt;/div&gt;
+          </div>
 
-          &lt;div class="article"&gt;
-            &lt;h2&gt;Two&lt;/h2&gt;
-            &lt;p&gt;some more two&lt;/p&gt;
+          <div class="article">
+            <h2>Two</h2>
+            <p>some more two</p>
 
-              &lt;p&gt;Two is published&lt;/p&gt;
+              <p>Two is published</p>
 
-          &lt;/div&gt;
+          </div>
 
-      &lt;/body&gt;
-    &lt;/html&gt;
+      </body>
+    </html>
     
 ## License 
 
 (The MIT License)
 
-Copyright (c) 2008 - 2009 TJ Holowaychuk &lt;tj@vision-media.ca&gt;
+Copyright (c) 2008 - 2009 TJ Holowaychuk <tj@vision-media.ca>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
