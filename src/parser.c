@@ -257,7 +257,7 @@ YY_ACTION(void) yy_1_var(char *yytext, int yyleng)
 {
 #define a yyval[-1]
   yyprintf((stderr, "do yy_1_var\n"));
-   p("' + (o.%s) + '", a) ;
+   p("' + (Mojo.escape(o.%s)) + '", a) ;
 #undef a
 }
 YY_ACTION(void) yy_2_body(char *yytext, int yyleng)
