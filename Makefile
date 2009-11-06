@@ -16,7 +16,7 @@ parser:
 	@$(LEG) < src/parser.leg > src/parser.c
 	
 inspect: all
-	@./$(BIN) < examples/template.js.html
+	@./$(BIN) < examples/template.html
 	
 test: all
 	@./$(BIN) < spec/fixtures/article.html > spec/fixtures/article.html.js
