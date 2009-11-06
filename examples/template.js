@@ -7,11 +7,13 @@ user = {
 	]
 }
 
-function enumerate(a, fn) {
-	var buf = []
-	for (var i = 0, len = a.length; i < len; ++i)
-	  buf.push(fn(a[i]))
-	return buf.join(' ')
+Mojo = {
+	version: '0.0.1',
+	enumerate: function(a, fn) {
+		for (var buf = [], i = 0, len = a.length; i < len; ++i)
+		  buf.push(fn(a[i]))
+		return buf.join(' ')
+	}
 }
 
 function render(o) {
@@ -20,7 +22,7 @@ function render(o) {
 	  <ul>\n\
 	    \n\
 	    \n\
-	    ' + enumerate(o.roles, function(o){
+	    ' + Mojo.enumerate(o.roles, function(o){
 	    return '\n\
 	      <li>' + (o.name) + '</li>\n\
 	    '}) + '\n\

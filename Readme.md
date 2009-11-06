@@ -11,7 +11,6 @@
 
   * gcc (compiler)
   * leg (parser generator)
-  * ruby / rspec (specs only)
   
 ## Building From Source
 

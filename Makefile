@@ -18,9 +18,6 @@ parser:
 inspect: all
 	@./$(BIN) < examples/template.js.html
 	
-test: all
-	@spec --format specdoc --color spec
-	
 install: $(BIN)
 	cp $(BIN) $(DEST)/$(NAME) 
 	
