@@ -64,4 +64,23 @@ describe 'Mojo'
 		  end
 		end
   end
+
+  describe 'large templates'
+    it 'should render properly'
+      var s = render('page', {
+				title: 'Articles',
+				articles: [
+				  { title: 'One', body: 'some more one' },
+				  { title: 'Two', body: 'some more two', published: true }
+				]
+			})
+			s.should.include('<title>Articles</title>')
+			s.should.include('<h1>Articles</h1>')
+			s.should.include('<h2>One</h2>')
+			s.should.include('<p>some more one</p>')
+			s.should.include('<h2>Two</h2>')
+			s.should.include('<p>some more two</p>')
+			s.should.include('<p>Two is published</p>')
+    end
+  end
 end

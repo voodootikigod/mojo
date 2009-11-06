@@ -27,6 +27,8 @@
 
     $ make test
     
+## Example
+    
 ## License 
 
 (The MIT License)
