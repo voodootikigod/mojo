@@ -11,6 +11,7 @@
 
   * gcc (compiler)
   * leg (parser generator)
+  * jspec (test suite only)
   
 ## Building From Source
 

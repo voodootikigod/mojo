@@ -18,6 +18,9 @@ parser:
 inspect: all
 	@./$(BIN) < examples/template.js.html
 	
+test: all
+	@jspec run --rhino
+	
 install: $(BIN)
 	cp $(BIN) $(DEST)/$(NAME) 
 	
