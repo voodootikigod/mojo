@@ -15,8 +15,8 @@
   
 ## Benchmarks
 
-Currently a large template can be executed over 5000 times in a second;
-results using the Rhino JavaScript engine.
+    mojo        : 5000 times  : 0.995 seconds
+    mustache.js : 5000 times  : 21.669 seconds
 
     $ make benchmarks
   
