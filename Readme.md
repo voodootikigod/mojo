@@ -11,10 +11,12 @@
 
   * gcc (compiler)
   * leg (parser generator)
+  * ruby / rspec (specs only)
   
 ## Building From Source
 
-    $ make && make install
+    $ make
+    $ make install
 
 ## Running Tests
 
