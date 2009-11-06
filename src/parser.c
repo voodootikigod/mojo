@@ -250,14 +250,14 @@ YY_ACTION(void) yy_1_enum(char *yytext, int yyleng)
 {
 #define a yyval[-1]
   yyprintf((stderr, "do yy_1_enum\n"));
-   p("' + %s(o, Mojo.prop(o.%s), function(o)%c\n    return '", MOJO_ENUM_FN, a, LPAREN) ;
+   p("' + %s(o, Mojo.normalize(o.%s), function(o)%c\n    return '", MOJO_ENUM_FN, a, LPAREN) ;
 #undef a
 }
 YY_ACTION(void) yy_1_var(char *yytext, int yyleng)
 {
 #define a yyval[-1]
   yyprintf((stderr, "do yy_1_var\n"));
-   p("' + (Mojo.escape(Mojo.prop(o.%s))) + '", a) ;
+   p("' + (Mojo.escape(Mojo.normalize(o.%s))) + '", a) ;
 #undef a
 }
 YY_ACTION(void) yy_2_body(char *yytext, int yyleng)

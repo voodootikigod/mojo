@@ -1,6 +1,6 @@
 '<ul> \n\
-  ' + Mojo.enumerate(o, Mojo.prop(o.users), function(o){
+  ' + Mojo.enumerate(o, Mojo.normalize(o.users), function(o){
     return '\n\
-    <li>' + (Mojo.escape(Mojo.prop(o.name))) + ' is ' + (Mojo.escape(Mojo.prop(o.age))) + '</li>\n\
+    <li>' + (Mojo.escape(Mojo.normalize(o.name))) + ' is ' + (Mojo.escape(Mojo.normalize(o.age))) + '</li>\n\
   '}) + '\n\
 </ul>'
