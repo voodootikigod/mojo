@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MOJO_VERSION "0.0.1"
+#define MOJO_VERSION "0.2.0"
 
 #ifndef MOJO_ENUM_FN
 #define MOJO_ENUM_FN "Mojo.enumerate"
