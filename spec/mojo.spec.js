@@ -19,8 +19,11 @@ describe 'Mojo'
 	
   describe '{ name }'
     it 'should buffer the given property name'
-      var str = fixture('article')
-			print(str)
+			var s = render('article', { title: 'Mojo', body: 'Is awesome' })
+			s.should.include('<div class="article">')
+			s.should.include('<h2>Mojo</h2>')
+			s.should.include('<p>Is awesome</p>')
+			s.should.include('</div>')
     end
   end
 end
