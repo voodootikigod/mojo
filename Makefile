@@ -22,6 +22,7 @@ test: all
 	@./$(BIN) < spec/fixtures/article.html > spec/fixtures/article.html.js
 	@./$(BIN) < spec/fixtures/users.html > spec/fixtures/users.html.js
 	@./$(BIN) < spec/fixtures/profile.html > spec/fixtures/profile.html.js
+	@./$(BIN) < spec/fixtures/comments.html > spec/fixtures/comments.html.js
 	@jspec run --rhino
 	
 install: $(BIN)

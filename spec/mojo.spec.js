@@ -16,6 +16,13 @@ describe 'Mojo'
     end
   end
 
+  describe '{! comment }'
+    it 'should render nothing'
+      var s = render('comments')
+			strip(s).should.be_empty
+    end
+  end
+
   describe '{# name } {/ name }'
 		describe 'with enumerable property'
 		  it 'should render the collection'
