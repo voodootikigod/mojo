@@ -36,19 +36,19 @@ examples/template.html
 
     <html>
       <head>
-        <title>{title}</title>
+        <title>{ title }</title>
       </head>
       <body>
-        <h1>{title}</h1>
-        {#articles}
+        <h1>{ title }</h1>
+        {# articles }
           <div class="article">
-            <h2>{title}</h2>
-            <p>{body}</p>
-            {#published}
-              <p>{title} is published</p>
-            {/published}
+            <h2>{ title }</h2>
+            <p>{ body }</p>
+            {# published }
+              <p>{ title } is published</p>
+            {/ published }
           </div>
-        {/articles}
+        {/ articles }
       </body>
     </html>
     
