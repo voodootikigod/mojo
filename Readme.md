@@ -16,6 +16,7 @@
 ## Benchmarks
 
     mojo        : 5000 times  : 0.995 seconds
+    mustache    : 5000 times  : 7.059 seconds
     mustache.js : 5000 times  : 21.669 seconds
 
     $ make benchmarks
