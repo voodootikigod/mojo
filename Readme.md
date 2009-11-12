@@ -64,7 +64,7 @@ examples/template.html
     
 complete template using mojo:
 
-    $ mono < examples/template.html > examples/template.html.js
+    $ mojo < examples/template.html > examples/template.html.js
     
 yields the following javascript:
 
