@@ -8,7 +8,7 @@ BIN = bin/$(NAME)
 DEST = /usr/bin
 CFILES = src/*.c
 CFLAGS = -std=c99
-RHINO = java org.mozilla.javascript.tools.shell.Main
+RHINO = java -jar ./ext/js.jar
 
 all: parser build
 	
